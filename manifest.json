@@ -1,0 +1,36 @@
+{
+  "name": "Vendora — نظام إدارة المبيعات",
+  "short_name": "Vendora",
+  "description": "Connecting Sellers & Buyers in One Place — Browse · Chat · Buy & Deliver",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#12052e",
+  "theme_color": "#7c3aed",
+  "lang": "ar",
+  "dir": "rtl",
+  "categories": ["shopping", "business", "productivity"],
+  "icons": [
+    { "src": "icon-72.png",  "sizes": "72x72",   "type": "image/png", "purpose": "any" },
+    { "src": "icon-96.png",  "sizes": "96x96",   "type": "image/png", "purpose": "any" },
+    { "src": "icon-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "الأسواق",
+      "short_name": "أسواق",
+      "url": "/index.html?section=markets",
+      "icons": [{ "src": "icon-96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "طلباتي",
+      "short_name": "طلبات",
+      "url": "/index.html?section=myOrders",
+      "icons": [{ "src": "icon-96.png", "sizes": "96x96" }]
+    }
+  ],
+  "prefer_related_applications": false
+}

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#be185d"/>
+    </linearGradient>
+    <linearGradient id="gL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9f7aea"/>
+      <stop offset="100%" stop-color="#5b21b6"/>
+    </linearGradient>
+    <linearGradient id="gR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <linearGradient id="gHL" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c4b5fd"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="gHR" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <radialGradient id="rad" cx="28%" cy="20%" r="65%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="ic">
+      <rect x="0" y="0" width="512" height="512" rx="108" ry="108"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="512" height="512" rx="108" ry="108" fill="url(#bg)"/>
+  <rect x="0" y="0" width="512" height="512" rx="108" ry="108" fill="url(#rad)"/>
+
+  <!-- Bag body -->
+  <g clip-path="url(#ic)">
+    <path d="M138 240 C136 226 143 213 155 206 C168 197 188 192 212 190 L256 189 L256 390 L166 390 C151 390 138 378 138 363 Z" fill="url(#gL)"/>
+    <path d="M374 240 C376 226 369 213 357 206 C344 197 324 192 300 190 L256 189 L256 390 L346 390 C361 390 374 378 374 363 Z" fill="url(#gR)"/>
+    <line x1="256" y1="189" x2="256" y2="390" stroke="rgba(255,255,255,0.13)" stroke-width="3"/>
+    <path d="M174 218 Q200 207 256 205" fill="none" stroke="rgba(255,255,255,0.13)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M338 218 Q312 207 256 205" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <!-- Handles -->
+  <path d="M190 191 Q184 134 214 118 Q234 108 256 108" fill="none" stroke="url(#gHL)" stroke-width="26" stroke-linecap="round"/>
+  <path d="M322 191 Q328 134 298 118 Q278 108 256 108" fill="none" stroke="url(#gHR)" stroke-width="26" stroke-linecap="round"/>
+
+  <!-- Pin -->
+  <circle cx="256" cy="163" r="54" fill="white" opacity="0.96"/>
+  <path d="M228 208 Q256 250 284 208 Z" fill="white" opacity="0.96"/>
+  <circle cx="256" cy="157" r="23" fill="#7c3aed"/>
+  <circle cx="247" cy="149" r="8" fill="rgba(255,255,255,0.50)"/>
+
+  <!-- vendora text -->
+  <text
+    x="256"
+    y="458"
+    text-anchor="middle"
+    font-family="'Arial Rounded MT Bold', 'Arial', sans-serif"
+    font-size="56"
+    font-weight="900"
+    letter-spacing="2"
+    fill="white"
+    opacity="0.95">vendora</text>
+
+  <!-- Bottom glow -->
+  <ellipse cx="256" cy="504" rx="160" ry="14" fill="rgba(255,255,255,0.05)"/>
+</svg>
