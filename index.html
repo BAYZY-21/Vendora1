@@ -544,6 +544,15 @@ textarea.fi { padding: 12px 14px; resize: vertical; min-height: 88px; }
 .ln-footer { text-align: center; margin-top: 18px; font-size: 11px; color: var(--t3); }
 .ln-footer i { color: var(--green); margin-left: 4px; }
 </style>
+
+
+
+
+
+
+
+
+
     <style>
 /* ================================================================
    APP SHELL
@@ -961,6 +970,18 @@ textarea.fi { padding: 12px 14px; resize: vertical; min-height: 88px; }
 .sb-overlay.vis { display: block; }
 </style>
 
+
+
+
+
+
+
+
+
+
+
+
+
     <style>
 /* ================================================================
    MODAL SYSTEM
@@ -1283,6 +1304,19 @@ textarea.fi { padding: 12px 14px; resize: vertical; min-height: 88px; }
 .anim-in { animation: fadeIn .35s ease; }
 </style>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     </head>
 <body>
 
@@ -1332,28 +1366,39 @@ textarea.fi { padding: 12px 14px; resize: vertical; min-height: 88px; }
       <div class="ln-brand-title">
         <span class="grad-text">تسوّق</span> بذكاء،<br>وصّل <span class="grad-text">بسرعة</span>
       </div>
-      <p class="ln-brand-p">منصة Vendora تربط الزبائن بالمحلات وفريق التوصيل في نظام واحد متكامل وذكي — مع نظام مشاركة موقع حي ومباشر.</p>
+      <p class="ln-brand-p">
+        منصة Vendora تربط الزبائن بالمحلات وفريق التوصيل في نظام واحد متكامل وذكي —
+        مع نظام مشاركة موقع حي ومباشر.
+      </p>
       <div class="ln-feat">
         <div class="ln-feat-item">
-          <div class="ln-feat-icon" style="background:var(--purple-xl);color:var(--purple)"><i class="fas fa-location-dot"></i></div>
+          <div class="ln-feat-icon" style="background:var(--purple-xl);color:var(--purple)">
+            <i class="fas fa-location-dot"></i>
+          </div>
           <span class="ln-feat-text">موقع حي مباشر من الزبون لموظف التوصيل</span>
         </div>
         <div class="ln-feat-item">
-          <div class="ln-feat-icon" style="background:var(--green-xl);color:var(--green-d)"><i class="fas fa-comments"></i></div>
+          <div class="ln-feat-icon" style="background:var(--green-xl);color:var(--green-d)">
+            <i class="fas fa-comments"></i>
+          </div>
           <span class="ln-feat-text">مراسلة مباشرة بين الزبون والمحل</span>
         </div>
         <div class="ln-feat-item">
-          <div class="ln-feat-icon" style="background:var(--orange-xl);color:var(--orange)"><i class="fas fa-cart-shopping"></i></div>
+          <div class="ln-feat-icon" style="background:var(--orange-xl);color:var(--orange)">
+            <i class="fas fa-cart-shopping"></i>
+          </div>
           <span class="ln-feat-text">تسوّق من آلاف المنتجات والأسواق</span>
         </div>
         <div class="ln-feat-item">
-          <div class="ln-feat-icon" style="background:var(--blue-xl);color:var(--blue)"><i class="fas fa-shield-check"></i></div>
+          <div class="ln-feat-icon" style="background:var(--blue-xl);color:var(--blue)">
+            <i class="fas fa-shield-check"></i>
+          </div>
           <span class="ln-feat-text">نظام توكن آمن للبائعين والموظفين</span>
         </div>
       </div>
     </div>
 
-    <!-- Card -->
+    <!-- Login Card -->
     <div class="ln-card">
       <div class="ln-logo">
         <div class="ln-logo-icon">
@@ -1370,41 +1415,132 @@ textarea.fi { padding: 12px 14px; resize: vertical; min-height: 88px; }
 
       <!-- Role Tabs -->
       <div class="role-tabs" role="tablist">
-        <button class="role-tab active" onclick="setRole('customer',this)"><i class="fas fa-user"></i>زبون</button>
-        <button class="role-tab" onclick="setRole('seller',this)"><i class="fas fa-shop"></i>بائع</button>
-        <button class="role-tab" onclick="setRole('delivery',this)"><i class="fas fa-motorcycle"></i>توصيل</button>
-        <button class="role-tab" onclick="setRole('admin',this)"><i class="fas fa-crown"></i>مدير</button>
+        <button class="role-tab active" onclick="setRole('customer',this)" role="tab" aria-selected="true">
+          <i class="fas fa-user"></i>زبون
+        </button>
+        <button class="role-tab" onclick="setRole('seller',this)" role="tab" aria-selected="false">
+          <i class="fas fa-shop"></i>بائع
+        </button>
+        <button class="role-tab" onclick="setRole('delivery',this)" role="tab" aria-selected="false">
+          <i class="fas fa-motorcycle"></i>توصيل
+        </button>
+        <button class="role-tab" onclick="setRole('admin',this)" role="tab" aria-selected="false">
+          <i class="fas fa-crown"></i>مدير
+        </button>
       </div>
 
       <!-- Customer form -->
       <div id="lf_customer">
-        <div class="fg"><label class="fl">اسم المستخدم</label><div class="ff"><input type="text" class="fi" id="cu_u" value="customer1" placeholder="اسم المستخدم"><i class="fas fa-user ff-i"></i></div></div>
-        <div class="fg"><label class="fl">البريد الإلكتروني</label><div class="ff"><input type="email" class="fi" id="cu_e" value="customer@test.com"><i class="fas fa-envelope ff-i"></i></div></div>
-        <div class="fg"><label class="fl">الرمز السري</label><div class="ff"><input type="password" class="fi" id="cu_p" value="123456" maxlength="8"><i class="fas fa-lock ff-i"></i></div></div>
+        <div class="fg">
+          <label class="fl">اسم المستخدم</label>
+          <div class="ff">
+            <input type="text" class="fi" id="cu_u" value="customer1"
+              placeholder="اسم المستخدم" autocomplete="username" autocorrect="off" spellcheck="false">
+            <i class="fas fa-user ff-i"></i>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fl">البريد الإلكتروني</label>
+          <div class="ff">
+            <input type="email" class="fi" id="cu_e" value="customer@test.com"
+              placeholder="email@example.com" autocomplete="email" inputmode="email">
+            <i class="fas fa-envelope ff-i"></i>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fl">الرمز السري</label>
+          <div class="ff">
+            <input type="password" class="fi" id="cu_p" value="123456"
+              maxlength="8" placeholder="● ● ● ● ● ●" autocomplete="current-password">
+            <i class="fas fa-lock ff-i"></i>
+          </div>
+        </div>
       </div>
+
       <!-- Seller form -->
       <div id="lf_seller" class="hidden">
-        <div class="fg"><label class="fl">اسم المستخدم</label><div class="ff"><input type="text" class="fi" value="seller1"><i class="fas fa-user ff-i"></i></div></div>
-        <div class="fg"><label class="fl">اسم المحل</label><div class="ff"><input type="text" class="fi" value="محل الأزياء"><i class="fas fa-shop ff-i"></i></div></div>
-        <div class="fg"><label class="fl">البريد الإلكتروني</label><div class="ff"><input type="email" class="fi" value="seller@test.com"><i class="fas fa-envelope ff-i"></i></div></div>
-        <div class="fg"><label class="fl">التوكن</label><div class="ff"><input type="text" class="fi" value="TKN-001" placeholder="TKN-XXXX"><i class="fas fa-key ff-i"></i></div></div>
+        <div class="fg">
+          <label class="fl">اسم المستخدم</label>
+          <div class="ff">
+            <input type="text" class="fi" value="seller1" autocorrect="off" spellcheck="false">
+            <i class="fas fa-user ff-i"></i>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fl">اسم المحل</label>
+          <div class="ff">
+            <input type="text" class="fi" value="محل الأزياء">
+            <i class="fas fa-shop ff-i"></i>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fl">البريد الإلكتروني</label>
+          <div class="ff">
+            <input type="email" class="fi" value="seller@test.com" inputmode="email">
+            <i class="fas fa-envelope ff-i"></i>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fl">التوكن (من المدير)</label>
+          <div class="ff">
+            <input type="text" class="fi" value="TKN-001" placeholder="TKN-XXXX"
+              autocorrect="off" autocapitalize="characters" spellcheck="false">
+            <i class="fas fa-key ff-i"></i>
+          </div>
+        </div>
       </div>
+
       <!-- Delivery form -->
       <div id="lf_delivery" class="hidden">
-        <div class="fg"><label class="fl">اسم المستخدم</label><div class="ff"><input type="text" class="fi" value="driver1"><i class="fas fa-user ff-i"></i></div></div>
-        <div class="fg"><label class="fl">البريد الإلكتروني</label><div class="ff"><input type="email" class="fi" value="driver@test.com"><i class="fas fa-envelope ff-i"></i></div></div>
-        <div class="fg"><label class="fl">التوكن</label><div class="ff"><input type="text" class="fi" value="TKN-DRV-001"><i class="fas fa-key ff-i"></i></div></div>
+        <div class="fg">
+          <label class="fl">اسم المستخدم</label>
+          <div class="ff">
+            <input type="text" class="fi" value="driver1" autocorrect="off" spellcheck="false">
+            <i class="fas fa-user ff-i"></i>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fl">البريد الإلكتروني</label>
+          <div class="ff">
+            <input type="email" class="fi" value="driver@test.com" inputmode="email">
+            <i class="fas fa-envelope ff-i"></i>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fl">التوكن</label>
+          <div class="ff">
+            <input type="text" class="fi" value="TKN-DRV-001"
+              autocorrect="off" autocapitalize="characters" spellcheck="false">
+            <i class="fas fa-key ff-i"></i>
+          </div>
+        </div>
       </div>
+
       <!-- Admin form -->
       <div id="lf_admin" class="hidden">
-        <div class="fg"><label class="fl">اسم المدير</label><div class="ff"><input type="text" class="fi" value="admin"><i class="fas fa-crown ff-i"></i></div></div>
-        <div class="fg"><label class="fl">كلمة المرور</label><div class="ff"><input type="password" class="fi" value="admin123"><i class="fas fa-lock ff-i"></i></div></div>
+        <div class="fg">
+          <label class="fl">اسم المدير</label>
+          <div class="ff">
+            <input type="text" class="fi" value="admin" autocorrect="off" spellcheck="false">
+            <i class="fas fa-crown ff-i"></i>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fl">كلمة المرور</label>
+          <div class="ff">
+            <input type="password" class="fi" value="admin123"
+              placeholder="● ● ● ● ● ●" autocomplete="current-password">
+            <i class="fas fa-lock ff-i"></i>
+          </div>
+        </div>
       </div>
 
       <button class="btn-login" id="loginBtn" onclick="doLogin()">
         <i class="fas fa-sign-in-alt"></i>دخول إلى النظام
       </button>
-      <div class="ln-footer"><i class="fas fa-shield-check"></i>اتصال آمن ومشفر · Vendora v3.0</div>
+      <div class="ln-footer">
+        <i class="fas fa-shield-check"></i>اتصال آمن ومشفر · Vendora v3.0
+      </div>
     </div>
   </div>
 </div>
@@ -1415,7 +1551,7 @@ textarea.fi { padding: 12px 14px; resize: vertical; min-height: 88px; }
 <div id="appShell">
 
   <!-- ═══ SIDEBAR ═══ -->
-  <nav class="sidebar" id="mainSidebar">
+  <nav class="sidebar" id="mainSidebar" role="navigation" aria-label="القائمة الجانبية">
     <div class="sb-head">
       <div class="sb-logo">
         <svg width="26" height="26" viewBox="0 0 60 60" fill="none">
@@ -1434,87 +1570,594 @@ textarea.fi { padding: 12px 14px; resize: vertical; min-height: 88px; }
 
     <div class="sb-search">
       <div class="sb-search-wrap">
-        <input type="text" class="sb-search-input" placeholder="بحث سريع..." oninput="sbSearch(this.value)">
+        <input type="text" class="sb-search-input" placeholder="بحث سريع..."
+          oninput="sbSearch(this.value)" autocorrect="off" spellcheck="false">
         <i class="fas fa-search"></i>
       </div>
     </div>
 
-    <nav class="sb-nav" id="sbNav" role="navigation"></nav>
+    <nav class="sb-nav" id="sbNav" role="navigation" aria-label="روابط القائمة"></nav>
 
     <div class="sb-foot">
-      <div class="sb-user" id="sbUserBtn" role="button" tabindex="0">
+      <!-- زر الخروج — onclick مباشر لضمان العمل -->
+      <div class="sb-user" id="sbUserBtn"
+        onclick="doLogout()"
+        role="button"
+        tabindex="0"
+        onkeydown="if(event.key==='Enter'||event.key===' ')doLogout()"
+        aria-label="تسجيل الخروج">
         <div class="sb-avatar" id="sbAv">م</div>
         <div>
           <div class="sb-user-name" id="sbUserName">المدير</div>
-          <div class="sb-user-sub">انقر للخروج</div>
+          <div class="sb-user-sub" style="color:var(--red);font-weight:700;">
+            <i class="fas fa-sign-out-alt" style="margin-left:4px;"></i>تسجيل الخروج
+          </div>
         </div>
-        <i class="fas fa-sign-out-alt sb-logout-i"></i>
+        <i class="fas fa-chevron-left sb-logout-i" style="margin-right:auto;font-size:11px;"></i>
       </div>
     </div>
   </nav>
 
-  <!-- ═══ MAIN ═══ -->
+  <!-- ═══ MAIN CONTENT ═══ -->
   <main class="main-content">
 
     <!-- Topbar -->
-    <div class="topbar" role="banner">
-      <button class="tb-menu" id="tbMenu" onclick="toggleSidebar()" aria-label="القائمة">
+    <header class="topbar" role="banner">
+      <!-- زر القائمة (هاتف) — display يُضبط بالـ JS -->
+      <button class="tb-menu" id="tbMenu"
+        onclick="toggleSidebar()"
+        aria-label="فتح القائمة"
+        style="display:none;">
         <i class="fas fa-bars"></i>
       </button>
+
       <div class="tb-crumb">
         <span class="tb-brand">Vendora</span>
         <span class="tb-sep">/</span>
         <span class="tb-title" id="tbTitle">لوحة التحكم</span>
       </div>
+
       <div class="tb-actions">
-        <div class="tb-btn" id="notifBtn" onclick="goToNotifs()" title="الإشعارات" role="button">
+        <!-- زر الإشعارات -->
+        <button class="tb-btn" id="notifBtn"
+          onclick="goToNotifs()"
+          title="الإشعارات"
+          aria-label="الإشعارات">
           <i class="fas fa-bell"></i>
-          <div class="tb-notif-dot" id="notifDot"></div>
-        </div>
-        <div class="tb-btn" onclick="goToMessages()" title="الرسائل" role="button">
+          <div class="tb-notif-dot" id="notifDot" style="display:none;"></div>
+        </button>
+
+        <!-- زر الرسائل -->
+        <button class="tb-btn"
+          onclick="goToMessages()"
+          title="الرسائل"
+          aria-label="الرسائل">
           <i class="fas fa-comment-dots"></i>
-        </div>
-        <div class="tb-chip" onclick="goToProfile()" role="button">
+        </button>
+
+        <!-- شريحة المستخدم -->
+        <button class="tb-chip"
+          onclick="goToProfile()"
+          aria-label="الملف الشخصي">
           <div class="tb-chip-av" id="tbAv">م</div>
           <div class="tb-chip-name" id="tbName">المدير</div>
           <i class="fas fa-chevron-down" style="font-size:9px;color:var(--t3);"></i>
-        </div>
+        </button>
       </div>
-    </div>
+    </header>
 
-    <!-- Content -->
+    <!-- منطقة المحتوى الرئيسية -->
     <div class="content-area" id="contentArea" role="main"></div>
 
   </main>
 
   <!-- ═══ MOBILE BOTTOM NAV ═══ -->
-  <nav class="mob-nav" id="mobNav" role="navigation" aria-label="التنقل السريع">
+  <nav class="mob-nav" id="mobNav"
+    role="navigation"
+    aria-label="التنقل السريع">
     <div class="mob-nav-inner" id="mobNavInner"></div>
   </nav>
 
 </div><!-- /appShell -->
 
-<!-- Sidebar overlay -->
+<!-- Sidebar overlay (هاتف) -->
 <div class="sb-overlay" id="sbOverlay" onclick="closeSidebar()"></div>
 
 <!-- Modals container -->
-<div id="modalsWrap"></div>
+<div id="modalsWrap" role="dialog" aria-modal="true"></div>
 
-<!-- Toasts -->
-<div class="toast-wrap" id="toastWrap" role="status" aria-live="polite"></div>
+<!-- Toast notifications -->
+<div class="toast-wrap" id="toastWrap" role="status" aria-live="polite" aria-atomic="false"></div>
 
-<!-- PWA banner -->
-<div class="pwa-banner" id="pwaBanner">
-  <div style="font-size:30px;">📲</div>
+<!-- PWA install banner -->
+<div class="pwa-banner" id="pwaBanner" role="complementary">
+  <div style="font-size:30px;" aria-hidden="true">📲</div>
   <div style="flex:1;">
     <div style="font-size:13px;font-weight:800;color:var(--t1);">ثبّت تطبيق Vendora</div>
     <div style="font-size:11px;color:var(--t3);margin-top:2px;">استمتع بتجربة أسرع على جهازك</div>
   </div>
   <div style="display:flex;gap:7px;flex-shrink:0;">
     <button class="btn btn-pr btn-sm" id="pwaInstallBtn">تثبيت</button>
-    <button class="btn btn-gh btn-sm" onclick="document.getElementById('pwaBanner').style.display='none'">لاحقاً</button>
+    <button class="btn btn-gh btn-sm"
+      onclick="document.getElementById('pwaBanner').style.display='none'"
+      aria-label="تجاهل">لاحقاً</button>
   </div>
 </div>
+
+<!-- ==============================================================
+     MOBILE OPTIMIZATION CSS (مدمج مباشرة هنا)
+     ============================================================== -->
+<style>
+/* ── تعطيل تأخير اللمس على كل العناصر ── */
+*, *::before, *::after {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* ── منع iOS zoom عند النقر على inputs ── */
+input, select, textarea, .fi {
+  font-size: 16px !important;
+}
+/* نعيد الحجم الطبيعي للقراءة فقط على الـ desktop ── */
+@media (min-width: 861px) {
+  input, select, textarea, .fi {
+    font-size: 13px !important;
+  }
+}
+
+/* ── MOBILE BOTTOM NAV - تصميم كامل متوازن ── */
+.mob-nav {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: #ffffff;
+  border-top: 1.5px solid var(--border);
+  z-index: 400;
+  box-shadow: 0 -2px 18px rgba(91,45,142,.10);
+}
+
+/* Safe area للـ iPhone X وما بعده */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .mob-nav {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+.mob-nav-inner {
+  display: flex;
+  height: 60px;
+  align-items: stretch;
+  justify-content: space-around;
+}
+
+.mn-item {
+  /* كل أيقونة تأخذ نفس المساحة بالضبط */
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+
+  padding: 6px 4px 7px;
+
+  color: #9B8BB8;
+  font-size: 9px;
+  font-weight: 700;
+  font-family: 'Cairo', sans-serif;
+
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  outline: none;
+
+  /* تسريع الاستجابة */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+
+  /* transition سريع */
+  transition: color .12s ease, transform .1s ease;
+}
+
+/* الأيقونة — حجم ثابت موحّد */
+.mn-item i {
+  font-size: 20px;
+  line-height: 1;
+  display: block;
+  flex-shrink: 0;
+  transition: transform .12s ease;
+}
+
+/* النص — منع التمدد والتقطع */
+.mn-item span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.1;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* Active state */
+.mn-item.active {
+  color: var(--purple);
+}
+
+/* خط علوي للـ active item */
+.mn-item.active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background: var(--grad);
+  border-radius: 0 0 3px 3px;
+}
+
+/* تلوين الأيقونة بالـ gradient للـ active */
+.mn-item.active i {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: translateY(-1px);
+}
+
+/* Tap feedback */
+.mn-item:active {
+  transform: scale(.90);
+}
+
+/* Badge الإشعارات */
+.mn-badge {
+  position: absolute;
+  top: 3px;
+  /* مركز الـ badge فوق الأيقونة */
+  left: 50%;
+  transform: translateX(4px);
+
+  background: #EF4444;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 900;
+  padding: 1px 4px;
+  border-radius: 99px;
+  min-width: 14px;
+  min-height: 14px;
+  text-align: center;
+  border: 1.5px solid #fff;
+  pointer-events: none;
+  line-height: 1.3;
+}
+
+/* ── CONTENT AREA — padding صحيح فوق الـ nav ── */
+@media (max-width: 860px) {
+  .mob-nav { display: block; }
+
+  .main-content { margin-right: 0 !important; }
+
+  .content-area {
+    padding: 14px 14px 74px !important;
+    /* 74 = 60px nav + 14px فراغ إضافي */
+  }
+
+  /* iPhone notch/home bar */
+  @supports (padding-bottom: env(safe-area-inset-bottom)) {
+    .content-area {
+      padding-bottom: calc(74px + env(safe-area-inset-bottom)) !important;
+    }
+  }
+
+  /* Toast فوق الـ nav */
+  .toast-wrap {
+    bottom: 68px !important;
+    left: 12px !important;
+    right: 12px !important;
+    max-width: 100% !important;
+  }
+
+  /* Sidebar مخفي بالكامل على الهاتف */
+  .sidebar {
+    transform: translateX(100%);
+    transition: transform .25s ease !important;
+    box-shadow: none;
+  }
+  .sidebar.open {
+    transform: translateX(0);
+    box-shadow: -4px 0 30px rgba(91,45,142,.22);
+  }
+}
+
+@media (max-width: 480px) {
+  .content-area {
+    padding: 12px 12px 72px !important;
+  }
+  .mn-item i      { font-size: 19px; }
+  .mn-item span   { font-size: 8.5px; }
+}
+
+@media (max-width: 360px) {
+  .mn-item        { padding: 6px 2px 7px; max-width: 64px; }
+  .mn-item i      { font-size: 18px; }
+  .mn-item span   { font-size: 8px; }
+}
+
+/* ── TOPBAR على الهاتف ── */
+@media (max-width: 860px) {
+  .topbar         { padding: 0 12px; gap: 8px; }
+  .tb-title       { font-size: 14px; }
+  .tb-btn         { width: 34px; height: 34px; font-size: 13px; }
+  .tb-chip-name   { display: none; }
+  .tb-chip        { padding: 5px; border-radius: 50%; }
+}
+
+/* ── STATS GRID على الهاتف ── */
+@media (max-width: 860px) {
+  .stats-grid     { grid-template-columns: repeat(2,1fr); gap: 10px; }
+}
+
+/* ── MODAL من الأسفل على الهاتف ── */
+@media (max-width: 600px) {
+  .modal-ov       { padding: 0; align-items: flex-end; }
+  .modal-box      {
+    border-radius: 20px 20px 0 0;
+    max-height: 88vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ── بطاقات الهاتف ── */
+@media (max-width: 480px) {
+  .card           { padding: 13px; border-radius: 14px; }
+  .card-hero      { padding: 16px 14px; border-radius: 16px; }
+  /* إخفاء الـ orb decoration لأداء أفضل */
+  .ch-orb         { display: none; }
+  .stat-card      { padding: 12px 11px; }
+  .stat-val       { font-size: 20px; }
+  .stat-icon      { width: 38px; height: 38px; font-size: 15px; border-radius: 10px; }
+  .sec-title      { font-size: 16px; margin-bottom: 14px; }
+  .st-icon        { width: 36px; height: 36px; font-size: 14px; border-radius: 10px; }
+}
+
+/* ── زر الدخول ── */
+@media (max-width: 480px) {
+  .btn-login      { min-height: 50px; font-size: 14px; }
+  .btn-xl         { min-height: 48px; font-size: 14px; border-radius: 14px; }
+  .btn-loc        { min-height: 50px; font-size: 13px; }
+}
+
+/* ── PWA Banner ── */
+@media (max-width: 480px) {
+  .pwa-banner {
+    bottom: 70px;
+    right: 12px; left: 12px;
+    max-width: 100%;
+    border-radius: 14px;
+  }
+}
+
+/* ── تسريع الأداء ── */
+.sidebar, .mob-nav, .topbar, .modal-box {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* ── Scroll أفضل ── */
+.content-area, .chat-messages, .sb-nav {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+}
+</style>
+
+<!-- ==============================================================
+     PERFORMANCE JS (مدمج مباشرة هنا)
+     ============================================================== -->
+<script>
+/* ─── 1. إزالة تأخير 300ms للنقرات على الهاتف ─── */
+document.addEventListener('touchstart', function(){}, {passive:true});
+document.addEventListener('touchmove',  function(){}, {passive:true});
+
+/* ─── 2. منع double-tap zoom على الأزرار ─── */
+(function(){
+  let last = 0;
+  document.addEventListener('touchend', function(e){
+    const t = e.target.closest('.btn,.mn-item,.nav-item,.role-tab,.btn-login,.btn-loc,[onclick]');
+    if (!t) return;
+    const now = Date.now();
+    if (now - last < 400) e.preventDefault();
+    last = now;
+  }, {passive:false});
+})();
+
+/* ─── 3. Real viewport height (iOS Safari fix) ─── */
+(function setVH(){
+  const set = () => {
+    document.documentElement.style.setProperty('--vh', window.innerHeight * .01 + 'px');
+  };
+  set();
+  window.addEventListener('resize', set, {passive:true});
+})();
+
+/* ─── 4. Topbar menu button visibility ─── */
+function _checkMobileMenu(){
+  const btn = document.getElementById('tbMenu');
+  if (btn) btn.style.display = window.innerWidth <= 860 ? 'flex' : 'none';
+}
+_checkMobileMenu();
+window.addEventListener('resize', _checkMobileMenu, {passive:true});
+
+/* ─── 5. IMPROVED buildMobNav — أيقونات متوازنة ─── */
+window.buildMobNav = function(){
+  const nav = document.getElementById('mobNavInner');
+  if (!nav) return;
+
+  const items = (window.MOB_NAV || {})[APP.role] || [];
+
+  /* أسماء مختصرة واضحة لكل قسم */
+  const META = {
+    dashboard:       {i:'fa-home',          l:'الرئيسية'},
+    markets:         {i:'fa-store',         l:'أسواق'},
+    cart:            {i:'fa-cart-shopping', l:'السلة'},
+    myOrders:        {i:'fa-bag-shopping',  l:'طلباتي'},
+    myProfile:       {i:'fa-user',          l:'حسابي'},
+    wishlist:        {i:'fa-heart',         l:'مفضلة'},
+    shareLocation:   {i:'fa-location-dot',  l:'موقعي'},
+    myChat:          {i:'fa-comments',      l:'رسائل'},
+    sellerOrders:    {i:'fa-list-check',    l:'طلبيات'},
+    sellerProds:     {i:'fa-box-open',      l:'منتجاتي'},
+    sellerStats:     {i:'fa-chart-bar',     l:'إحصاء'},
+    sellerProfile:   {i:'fa-shop',          l:'بياناتي'},
+    sellerInv:       {i:'fa-warehouse',     l:'مخزون'},
+    assignedOrders:  {i:'fa-list',          l:'طلبياتي'},
+    driverLocation:  {i:'fa-location-dot',  l:'موقعي'},
+    completedOrders: {i:'fa-check-circle',  l:'منجزة'},
+    driverStats:     {i:'fa-chart-line',    l:'أدائي'},
+    allOrders:       {i:'fa-receipt',       l:'طلبيات'},
+    sellers:         {i:'fa-shop',          l:'بائعون'},
+    deliveryTeam:    {i:'fa-motorcycle',    l:'توصيل'},
+    analytics:       {i:'fa-chart-line',    l:'تحليل'},
+    tokens:          {i:'fa-key',           l:'توكنات'},
+    adminMarkets:    {i:'fa-store',         l:'أسواق'},
+    notifications:   {i:'fa-bell',          l:'إشعارات'},
+  };
+
+  let h = '';
+  items.forEach(function(id){
+    const m   = META[id] || {i:'fa-circle', l:id};
+    const cnt = (id === 'cart') ? APP.cart.length : 0;
+    const badge = cnt > 0
+      ? `<div class="mn-badge">${cnt}</div>`
+      : '';
+
+    h += `<div class="mn-item" id="mn_${id}"
+               onclick="showSection('${id}')"
+               role="button"
+               tabindex="0"
+               aria-label="${m.l}">
+            ${badge}
+            <i class="fas ${m.i}" aria-hidden="true"></i>
+            <span>${m.l}</span>
+          </div>`;
+  });
+
+  nav.innerHTML = h;
+
+  /* تحديد الـ active */
+  const cur = document.getElementById('mn_' + (window.APP?.currentSection || ''));
+  if (cur) cur.classList.add('active');
+};
+
+/* ─── 6. Fast section switching ─── */
+(function patchShowSection(){
+  const orig = window.showSection;
+  if (!orig) return;
+
+  window.showSection = function(id){
+    /* feedback فوري قبل الـ render */
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    document.getElementById('nav_' + id)?.classList.add('active');
+    document.querySelectorAll('.mn-item').forEach(n => n.classList.remove('active'));
+    document.getElementById('mn_' + id)?.classList.add('active');
+
+    const titleEl = document.getElementById('tbTitle');
+    if (titleEl && window.SEC_TITLES?.[id]) titleEl.textContent = SEC_TITLES[id];
+
+    /* render في الـ frame التالي لعدم block الـ UI */
+    requestAnimationFrame(function(){ orig(id); });
+
+    /* scroll للأعلى على الهاتف */
+    if (window.innerWidth <= 860){
+      const ca = document.getElementById('contentArea');
+      if (ca) ca.scrollTop = 0;
+    }
+  };
+})();
+
+/* ─── 7. Toast cap ─── */
+(function patchToast(){
+  const orig = window.showToast;
+  if (!orig) return;
+  window.showToast = function(type, title, sub){
+    const wrap = document.getElementById('toastWrap');
+    if (wrap){
+      const all = wrap.querySelectorAll('.toast');
+      if (all.length >= 3) all[0].remove();
+    }
+    orig(type, title, sub);
+  };
+})();
+
+/* ─── 8. Debounce search ─── */
+(function patchSearch(){
+  const orig = window.homeSearchFn;
+  if (!orig) return;
+  let t;
+  window.homeSearchFn = function(q){
+    clearTimeout(t);
+    t = setTimeout(function(){ orig(q); }, 180);
+  };
+})();
+
+/* ─── 9. Loading screen timing ─── */
+window.addEventListener('DOMContentLoaded', function(){
+  const ls  = document.getElementById('loadingScreen');
+  const lp  = document.getElementById('loginPage');
+  const isMobile = window.innerWidth <= 860;
+
+  /* على الهاتف: أسرع */
+  const delay = isMobile ? 1500 : 2400;
+
+  if (ls && lp) {
+    setTimeout(function(){
+      ls.style.opacity = '0';
+      ls.style.pointerEvents = 'none';
+      setTimeout(function(){ ls.style.display = 'none'; }, 500);
+      lp.classList.add('active');
+    }, delay);
+  }
+
+  /* menu button */
+  _checkMobileMenu();
+
+}, {once:true});
+
+/* ─── 10. Logout binding helper ─── */
+window._bindLogoutBtn = function(){
+  const btn = document.getElementById('sbUserBtn');
+  if (!btn) return;
+  /* منع التكرار */
+  const clone = btn.cloneNode(true);
+  btn.parentNode.replaceChild(clone, btn);
+  clone.addEventListener('click', function(){ doLogout(); }, {passive:true});
+  clone.addEventListener('keydown', function(e){
+    if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); doLogout(); }
+  });
+};
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
 /* ==============================================================
    VENDORA 3.0  ·  CORE APPLICATION
@@ -2079,6 +2722,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
 console.log('%c VENDORA 3.0 %c حارث حسيب السامرائي', 'background:linear-gradient(135deg,#5B2D8E,#C0306A,#F07020);color:#fff;font-weight:900;font-size:13px;padding:5px 14px;border-radius:7px;', 'color:#5B2D8E;font-weight:700;font-size:12px;padding:5px;');
 </script>
+
+
+
+
+
+
+
+
+
+
+
 <script>
 /* ================================================================
    LOCATION SYSTEM — COMPLETE
@@ -2603,6 +3257,16 @@ RENDERS.wishlist = () => `<div class="anim-up">
     : `<div class="empty"><div class="empty-icon"><i class="fas fa-heart" style="color:var(--pink);"></i></div><div class="empty-title">المفضلة فارغة</div><div class="empty-sub">أضف منتجات بالضغط على قلب المنتج</div><button class="btn btn-pr" style="margin-top:16px;" onclick="showSection('markets')"><i class="fas fa-store"></i>تصفح</button></div>`}
 </div>`;
 </script>
+
+
+
+
+
+
+
+
+
+
 <script>
 /* ================================================================
    CUSTOMER — MY ORDERS
@@ -2937,6 +3601,24 @@ RENDERS.myProfile = () => {
   </div>`;
 };
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
 /* ================================================================
    SELLER — DASHBOARD
@@ -3284,6 +3966,21 @@ RENDERS.sellerProfile = () => {
   </div>`;
 };
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
 /* ================================================================
    DELIVERY — DASHBOARD (COMPLETE)
@@ -3785,6 +4482,22 @@ RENDERS.driverStats = function () {
   </div>`;
 };
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
 /* ================================================================
    ADMIN — DASHBOARD
